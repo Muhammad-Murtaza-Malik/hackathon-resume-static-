@@ -1,0 +1,177 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6c63ff, #3a47d5); /* Gradient Background */
+    color: #333;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/* Card-style Form Container */
+#resumeForm {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for form */
+    transition: transform 0.3s ease-in-out; /* Animation on hover */
+    margin-bottom: 30px; /* Spacing between form and resume output */
+}
+
+#resumeForm:hover {
+    transform: translateY(-5px); /* Hover lift effect */
+}
+
+#resumeForm h2.top-h {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3a47d5;
+    font-size: 1.8rem;
+}
+
+#resumeForm label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+#resumeForm input[type="text"],
+#resumeForm input[type="email"],
+button {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for inputs */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+#resumeForm input[type="text"]:focus,
+#resumeForm input[type="email"]:focus,
+button:focus {
+    border-color: #3a47d5;
+    outline: none;
+    box-shadow: 0 0 8px rgba(58, 71, 213, 0.5); /* Blue focus effect */
+}
+
+#resumeForm input[type="text"]:hover,
+#resumeForm input[type="email"]:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Hover shadow for inputs */
+}
+
+button {
+    background-color: #3a47d5;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 16px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c63ff; /* Hover effect on button */
+}
+
+/* Profile Picture */
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+input[type="file"]:hover {
+    background-color: #f1f1f1;
+}
+
+/* Resume Output Container */
+#resumeOutput {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for the resume */
+    max-width: 700px;
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+#resumeOutput:hover {
+    transform: translateY(-5px); /* Hover lift effect for the output */
+}
+
+#resumeOutput h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3a47d5;
+    font-size: 1.8rem;
+}
+
+#resumeOutput p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+#resumeOutput p strong {
+    color: #3a47d5;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    #resumeForm,
+    #resumeOutput {
+        padding: 20px;
+    }
+
+    #resumeForm h2.top-h {
+        font-size: 1.6rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    button,
+    input[type="file"] {
+        font-size: 1rem;
+    }
+
+    #resumeOutput p {
+        font-size: 1rem;
+    }
+}
